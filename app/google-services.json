@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767004161122",
+    "project_id": "harmonyhue-fa226",
+    "storage_bucket": "harmonyhue-fa226.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767004161122:android:20df3c719dc1ff49d04d3b",
+        "android_client_info": {
+          "package_name": "com.lottoapp.harmonyhue"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAiY2chHb9sA2ctYjwDOZ30kzWPoR3wog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
