@@ -1,6 +1,5 @@
 package com.lottoapp.harmonyhue
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,13 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //buttons
-        val btnLogin = findViewById<Button>(R.id.btnLoginMA)
-        val btnLoginToRegister = findViewById<Button>(R.id.btnRegisterMA
-        )
+        val btnLogin = findViewById<Button>(R.id.btnLoginLoginBtn)
+        val btnLoginToRegister = findViewById<Button>(R.id.btnRegisterLoginBtn)
+
         //initialing the FireBaseAuth
         auth = FirebaseAuth.getInstance()
-
-        inputLogin = findViewById(R.id.emaliEDlogin)
+        inputLogin = findViewById(R.id.nameED)
         inputPassword = findViewById(R.id.passwordEDlogin)
 
         //log in into the app
@@ -40,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         btnLoginToRegister.setOnClickListener {
             val intentToRegister = Intent(this, RegisterActivity::class.java)
             startActivity(intentToRegister)
+            finish()
         }
 
     }
@@ -72,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         showErrorSnackBar("You are logged in successfully.", false)
-                        goToNumbSelectionActivity()
+                        goToNumbSelectionActivity() // TODO
                     } else {
                         showErrorSnackBar(task.exception?.message.toString(), true)
                     }
@@ -84,9 +83,9 @@ class MainActivity : AppCompatActivity() {
         val user = auth.currentUser
         val uid = user?.email.toString()
 
-        val intentToRules = Intent(this, RulesActivity::class.java)
-        intentToRules.putExtra("uID", uid)
-        startActivity(intentToRules)
+        val intentFromLoginToPatient = Intent(this, PatientActivity::class.java)
+        intentFromLoginToPatient.putExtra("uID", uid)
+        startActivity(intentFromLoginToPatient)
     }
 
     private fun showErrorSnackBar(message: String, isError: Boolean) {

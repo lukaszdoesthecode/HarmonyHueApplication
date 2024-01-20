@@ -7,8 +7,13 @@
     tools:context=".FormActivity">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="409dp"
         android:layout_height="729dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
@@ -141,7 +146,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Pan/Bisexual" />
+                    android:text="Bisexual" />
 
                 <RadioButton
                     android:id="@+id/otherOrientationRadioButton"
@@ -406,7 +411,7 @@
 
             <TextView
                 android:id="@+id/communicationDifficultyQuestionLabel"
-                android:layout_width="match_parent"
+                android:layout_width="396dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Do you struggle to communicate with people on a daily basis?"
@@ -486,10 +491,10 @@
 
             <TextView
                 android:id="@+id/beingObservedFeelingQuestionLabel"
-                android:layout_width="match_parent"
+                android:layout_width="398dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Have you ever experienced feeling of being listened or observed even though you were the only person in the room?"
+                android:text=" Have you ever experienced feeling of being listened or   observed even though you were the only person in the room?"
                 android:textAlignment="center" />
 
             <RadioGroup

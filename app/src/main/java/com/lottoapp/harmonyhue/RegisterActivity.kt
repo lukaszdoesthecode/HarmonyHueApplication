@@ -1,6 +1,5 @@
 package com.lottoapp.harmonyhue
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +10,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var inputName: EditText
     private lateinit var inputLogin: EditText
     private lateinit var inputPassword: EditText
     private lateinit var auth: FirebaseAuth
@@ -23,8 +21,7 @@ class RegisterActivity : AppCompatActivity() {
         //Initializing firebase
         auth = FirebaseAuth.getInstance()
 
-        inputName = findViewById(R.id.nameEDregister)
-        inputLogin = findViewById(R.id.emaliEDlogin)
+        inputLogin = findViewById(R.id.nameED)
         inputPassword = findViewById(R.id.passwordEDlogin)
 
         val btnRegister = findViewById<Button>(R.id.btnRegisterRA)
@@ -42,9 +39,8 @@ class RegisterActivity : AppCompatActivity() {
     private fun registerUser() {
         val email = inputLogin.text.toString().trim()
         val password = inputPassword.text.toString().trim()
-        val name = inputName.text.toString().trim()
 
-        if (email.isBlank() || password.isBlank() || name.isBlank()) {
+        if (email.isBlank() || password.isBlank()) {
             showMessage("Please fill in all fields")
             return
         }

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.HarmonyHue"
         tools:targetApi="34">
         <activity
+            android:name=".TherapyTypesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayTherapist"
+            android:exported="false" />
+        <activity
+            android:name=".CheckMedicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindTherapistActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
